@@ -38,7 +38,7 @@ var m = p.exec(txt);
         dataType: 'json',
 				success: function(data){
 					if(data.status == "OK"){						
-						setTimeout("document.location.href = 'https:\/\/moja.bolha.com\/sporocila'", 2000);
+						setTimeout("document.location.href = 'https:\/\/moja.bolha.com\/" + (removeType == "delete" ? : "INBOX/sporocila" : "TRASH/all")+ "'", 2000);
 					}
 				},
 				error: function(data){
