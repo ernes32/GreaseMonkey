@@ -31,8 +31,8 @@ var m = p.exec(txt);
         data: { data : [int1], removetype : "delete"},
         dataType: 'json',
 				success: function(data){
-					if(data.status == "OK"){
-						document.location.href = "https://moja.bolha.com/sporocila";
+					if(data.status == "OK"){						
+						setTimeout("document.location.href = 'https:\/\/moja.bolha.com\/sporocila'", 2000);
 					}
 				},
 				error: function(data){
