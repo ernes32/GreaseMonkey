@@ -14,6 +14,12 @@ function EkiScript()	//function workaround for IE6/7
 javascript:(function(){	
 	
 var txt= document.location.href
+
+var removeType = "delete";
+
+if txt.indexOf("/TRASH") > -1)
+	removeType = "purge";
+
       var re1='.*?';	// Non-greedy match on filler
       var re2='(\\d+)';	// Integer Number 1
 
@@ -28,7 +34,7 @@ var m = p.exec(txt);
 			$.ajax({
         url: 	"https://moja.bolha.com/messaging/ajaxDeleteConversations",
         type: 'POST',
-        data: { data : [int1], removetype : "delete"},
+        data: { data : [int1], removetype : removeType},
         dataType: 'json',
 				success: function(data){
 					if(data.status == "OK"){						
