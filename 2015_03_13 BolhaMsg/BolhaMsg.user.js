@@ -32,7 +32,7 @@ var m = p.exec(txt);
         dataType: 'json',
 				success: function(data){
 					if(data.status == "OK"){
-          ;
+						document.location.href = "https://moja.bolha.com/sporocila";
 					}
 				},
 				error: function(data){
