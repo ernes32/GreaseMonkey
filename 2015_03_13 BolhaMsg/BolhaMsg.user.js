@@ -17,7 +17,7 @@ var txt= document.location.href
 
 var removeType = "delete";
 
-if txt.indexOf("/TRASH") > -1)
+if ( txt.indexOf("/TRASH") > -1)
 	removeType = "purge";
 
       var re1='.*?';	// Non-greedy match on filler
